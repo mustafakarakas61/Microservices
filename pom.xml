@@ -5,7 +5,8 @@
 
     <groupId>com.mustafa</groupId>
     <artifactId>microservices</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
     <name>microservices</name>
     <url>https://www.amigoscode.com</url>
 
