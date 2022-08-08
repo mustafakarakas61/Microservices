@@ -1,5 +1,9 @@
-package com.mustafa.customer;
+package com.mustafa.customer.service;
 
+import com.mustafa.customer.CustomerRegistrationRequest;
+import com.mustafa.customer.repository.CustomerRepository;
+import com.mustafa.customer.FraudCheckResponse;
+import com.mustafa.customer.entity.Customer;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

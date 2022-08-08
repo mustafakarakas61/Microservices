@@ -1,5 +1,7 @@
-package com.mustafa.fraud;
+package com.mustafa.fraud.service;
 
+import com.mustafa.fraud.repository.FraudCheckHistoryRepository;
+import com.mustafa.fraud.entity.FraudCheckHistory;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,5 +1,7 @@
-package com.mustafa.customer;
+package com.mustafa.customer.controller;
 
+import com.mustafa.customer.CustomerRegistrationRequest;
+import com.mustafa.customer.service.CustomerService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;

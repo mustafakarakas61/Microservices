@@ -1,4 +1,4 @@
-package com.mustafa.customer;
+package com.mustafa.customer.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
