@@ -1,24 +1,30 @@
 package com.mustafa.customer.controller;
 
-import com.mustafa.customer.CustomerRegistrationRequest;
+import com.mustafa.customer.dto.CustomerDTO;
 import com.mustafa.customer.service.CustomerService;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Slf4j
 @RestController
 @RequestMapping("api/v1/customers")
-@AllArgsConstructor
 public class CustomerController{
 
+    private final Logger LOGGER = LoggerFactory.getLogger(CustomerController.class);
+
     private final CustomerService customerService;
-    @PostMapping
-    public void registerCustomer(@RequestBody CustomerRegistrationRequest customerRegistrationRequest){
-        log.info("new customer registration {}", customerRegistrationRequest);
-        customerService.registerCustomer(customerRegistrationRequest);
+
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
+
+    @PostMapping(value = "/")
+    public void registerCustomer(@RequestBody CustomerDTO customerDTO){
+        customerService.registerCustomer(customerDTO);
+        LOGGER.info("New customer registered " + customerDTO);
     }
 }

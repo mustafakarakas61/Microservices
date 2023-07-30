@@ -1,18 +1,10 @@
 package com.mustafa.fraud.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
+@Table(name = "FraudCheckHistory")
 public class FraudCheckHistory {
     @Id
     @SequenceGenerator(
@@ -27,4 +19,36 @@ public class FraudCheckHistory {
     private Integer customerId;
     private Boolean isFraudster;
     private LocalDateTime createAt;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
+
+    public Boolean getFraudster() {
+        return isFraudster;
+    }
+
+    public void setFraudster(Boolean fraudster) {
+        isFraudster = fraudster;
+    }
+
+    public LocalDateTime getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(LocalDateTime createAt) {
+        this.createAt = createAt;
+    }
 }

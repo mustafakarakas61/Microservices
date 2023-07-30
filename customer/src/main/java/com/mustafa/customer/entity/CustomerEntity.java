@@ -12,7 +12,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Customer {
+@Table(name = "customer")
+public class CustomerEntity {
     @Id
     @SequenceGenerator(
             name = "customer_id_sequence",
